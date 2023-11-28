@@ -1,6 +1,8 @@
 import  express from "express";
 import mysql from 'mysql';
 import cors from "cors";
+
+let port = process.env.PORT || 8800
 const app=express();
 app.use(cors());
 app.use(express.json());
@@ -63,6 +65,6 @@ app.post("/books", (req, res) => {
       return res.json(data);
     });
   });
-app.listen(8800,()=>{
+app.listen(port,()=>{
     console.log("Connected to backend1");
 })
