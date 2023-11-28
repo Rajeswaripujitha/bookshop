@@ -2,11 +2,11 @@ import  express from "express";
 import mysql from 'mysql';
 import cors from "cors";
 
-let port = process.env.PORT || 8800
+let port = 8800
 const app=express();
 app.use(cors());
 app.use(express.json());
-const db= mysql.createConnection({
+const db= mysql.createPool({
     host:"localhost",
     user:"root",
     password:"123@Pujitha#1",
