@@ -2,7 +2,7 @@ import  express from "express";
 import mysql from 'mysql';
 import cors from "cors";
 
-let port = 8800
+let port = process.env.PORT || 8800
 const app=express();
 app.use(cors());
 app.use(express.json());
