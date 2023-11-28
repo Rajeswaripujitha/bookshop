@@ -7,10 +7,11 @@ const app=express();
 app.use(cors());
 app.use(express.json());
 const db= mysql.createPool({
-    host:"localhost",
+    host:"127.0.0.1",
     user:"root",
     password:"123@Pujitha#1",
-    database:"test"
+    database:"test",
+    port: "3306"
 })
 
 app.get("/",(req,res)=>{
